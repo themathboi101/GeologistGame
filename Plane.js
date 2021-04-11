@@ -10,9 +10,14 @@ class Plane {
     }
     
     display(){
-      var pos =this.body.position;
+      push();
+      var pos= this.body.position;
       rectMode(CENTER);
-      fill("brown");
-      rect(pos.x, pos.y, this.width, this.height);
-    }
-  };
+      rotate(this.body,Math.PI/2);
+      translate(pos.x,pos.y);
+      
+        rect(pos.x,pos.y,this.width, this.height);
+        pop();
+      
+}
+}
