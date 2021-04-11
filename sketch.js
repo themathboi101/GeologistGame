@@ -1,11 +1,3 @@
-const Engine = Matter.Engine;
-const World= Matter.World;
-const Bodies = Matter.Bodies;
-
-var engine, world;
-var hammer;
-
-
 function setup(){
     var canvas = createCanvas(1200,600);
     engine = Engine.create();
@@ -15,7 +7,7 @@ function setup(){
     hammer = new Hammer(10,100);
     iron=new Iron(600,300,30,30);
     ruber =new Rubber(70,70,100);
-
+    stone= new Stone(300,400,40,40);
   
 
 
@@ -30,6 +22,7 @@ function draw(){
     hammer.display();
     iron.display();
     ruber.display();
+    stone.display();
 
     
  
