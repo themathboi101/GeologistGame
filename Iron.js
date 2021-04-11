@@ -12,10 +12,14 @@ class Iron{
         
     }
     display(){
+        push();
         var pos= this.body.position;
         rectMode(CENTER);
+        rotate(this.body,Math.PI/2);
+        translate(pos.x,pos.y);
         
           rect(pos.x,pos.y,this.width, this.height);
+          pop();
         
 }
 }
